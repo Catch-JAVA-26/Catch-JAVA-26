@@ -7,7 +7,7 @@ class Solution {
         Set hash = new HashSet();
         for(int i=0;i<nums.length;i++){
             hash.add(nums[i]);
-        }
+        } 
         // 폰켓몬의 종류를 파악한 후 
         // N/2가 더 크면 폰켓몬의 최대 수를 반환하고
         // 폰켓몬의 최대수가 더 크면 N/2의 값을 반환한다.

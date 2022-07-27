@@ -18,7 +18,7 @@ class Solution {
             String aList[] = new String[pSet.size()];
             pSet.toArray(aList);
             answer = aList[0];
-        }
+        } 
         else{
             // Array를 ArrayList로 변경하여 completion에 있는 이름을 participant에서 뺀다.
             ArrayList<String> pList = new ArrayList<>(Arrays.asList(participant));

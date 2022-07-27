@@ -23,7 +23,7 @@ class Solution {
             }
             System.out.println(box);
         }
-        
+         
         // 여러개의 리스트의 조합 구하기.
         for(int loop=0;loop<box.size();loop++){
             answer*= box.get(loop).size()+1;

@@ -11,7 +11,7 @@ class Solution {
             String longStr = phone_book[loop-1].length() > phone_book[loop].length() ? phone_book[loop-1] : phone_book[loop];
             if(longStr.indexOf(shortStr)==0){
                 return false;
-            }
+            } 
         }
         return answer;
     }
