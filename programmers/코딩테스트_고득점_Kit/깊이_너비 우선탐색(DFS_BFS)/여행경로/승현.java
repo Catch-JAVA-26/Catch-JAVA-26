@@ -1,7 +1,7 @@
 import java.util.*;
 
 class Solution {
-    List<String> answerStack;
+    Stack<String> answerStack;
     boolean[] visit;
 
     public String[] solution(String[][] tickets) {
@@ -15,8 +15,8 @@ class Solution {
             return o2[0].compareTo(o1[0]);
         });
 
-        List<String> route = new ArrayList<>();
-        route.add("ICN");
+        Stack<String> route = new Stack<>();
+        route.push("ICN");
 
         dfs(tickets, route);
 
@@ -28,19 +28,19 @@ class Solution {
         return answer;
     }
 
-    public void dfs(String[][] tickets, List<String> route) {
+    public void dfs(String[][] tickets, Stack<String> route) {
         if (route.size() == tickets.length + 1) {
             answerStack = route;
             return;
         }
 
         for (int i=0; i<tickets.length; i++) {
-            if (!visit[i] && route.get(route.size()-1).equals(tickets[i][0])) {
+            if (!visit[i] && route.peek().equals(tickets[i][0])) {
                 visit[i] = true;
 
-                List<String> newRoute = new ArrayList<>();
+                Stack<String> newRoute = new Stack<>();
                 newRoute.addAll(route);
-                newRoute.add(tickets[i][1]);
+                newRoute.push(tickets[i][1]);
 
                 dfs(tickets, newRoute);
 
